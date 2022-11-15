@@ -11,7 +11,7 @@ function Header() {
         <div className={cx('logo')}>
           <img src= {images.logo} alt= 'tiktok'/>
         </div>
-        <div className={cx('Search')}>
+        <div className={cx('search')}>
           <input placeholder="Search accounts and videos" spellCheck = {false}/>
           <button className={cx('clear')}>
             clear
@@ -20,6 +20,9 @@ function Header() {
           <button className={cx('search-btn')}>
             {/*search*/ }
           </button>
+        </div>
+        <div className={cx('action')}>
+
         </div>
       </div>
     </header>
