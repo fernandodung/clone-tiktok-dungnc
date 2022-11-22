@@ -2,12 +2,14 @@ import classNames from "classnames/bind";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { useEffect, useState } from "react";
 import {Wrapper as PopperWrapper} from "../../../Popper"
+import AccountsItem from "./AccountItem";
 
 import styles from "./Header.module.scss";
 import images from "../../../../assets/images";
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark, faMagnifyingGlass, faPlus, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
 import 'tippy.js/dist/tippy.css'
+import Button from "../../../Button";
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +18,7 @@ function Header() {
 
   useEffect(() => {
     setTimeout(() =>{
-      setSearchResult([1,2])
+      setSearchResult([1])
     },2000)
   },[])
 
@@ -32,6 +34,10 @@ function Header() {
             <div className={cx('search-result')} tabIndex="-1" {...attr}>
               <PopperWrapper>
                 <h4 className={cx('search-title')}>Accounts</h4>
+                <AccountsItem/>
+                <AccountsItem/>
+                <AccountsItem/>
+                <h4 className={cx('span')}> View all results for ....</h4>
               </PopperWrapper>
             </div>
           )}
@@ -48,6 +54,10 @@ function Header() {
           </div>
         </Tippy>
         <div className={cx('action')}>
+          <Button leftIcon = {<FontAwesomeIcon icon={faPlus}/>} text>Upload</Button>
+          <Button primary>Log in</Button>
+          <Button outline>Follow</Button>
+          <Button rounded>Get App</Button>
         </div>
       </div>
     </header>
