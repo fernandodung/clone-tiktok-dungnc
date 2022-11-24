@@ -18,7 +18,7 @@ function Header() {
 
   useEffect(() => {
     setTimeout(() =>{
-      setSearchResult([1])
+      setSearchResult([])
     },2000)
   },[])
 
@@ -54,10 +54,8 @@ function Header() {
           </div>
         </Tippy>
         <div className={cx('action')}>
-          <Button leftIcon = {<FontAwesomeIcon icon={faPlus}/>} text>Upload</Button>
+          <Button leftIcon = {<FontAwesomeIcon icon={faPlus}/>} text >Upload</Button>
           <Button primary>Log in</Button>
-          <Button outline>Follow</Button>
-          <Button rounded>Get App</Button>
         </div>
       </div>
     </header>

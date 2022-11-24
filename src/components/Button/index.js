@@ -23,7 +23,8 @@ function Button({
     let Comp = 'button'
 
     const props = {
-        onClick
+        onClick,
+        ...passProps
     }
 
     if(to) {
