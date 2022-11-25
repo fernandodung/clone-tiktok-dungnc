@@ -1,9 +1,9 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     font-size: 1.6rem;
     font-weight: 700;
-    padding: 8px 12px;
+    padding: 7px 12px;
     border-radius: 4px;
     min-width: 100px;
     background-color: var(--white);
@@ -18,24 +18,26 @@
 
 .rounded {
     border-radius: 999px;
-    border-color: rgba(22, 24, 35, .12);
+    border-color: rgba(22, 24, 35, 0.12);
     box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
-    color: rgba(22, 24, 35, .75);
+    color: rgba(22, 24, 35, 0.75);
     min-width: 90px;
     font-size: 1.4rem;
 
     &:hover {
-        border-color: rgba(22, 24, 35, .2);
+        border-color: rgba(22, 24, 35, 0.2);
         background-color: rgba(255, 255, 255, 1);
     }
 }
 
 .primary {
+    border-color: var(--primary);
     background-color: var(--primary);
     color: var(--white);
+    padding: 7.8px 12px;
 
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
 
@@ -53,7 +55,7 @@
     border: 1px solid rgba(22, 24, 35, 0.12);
 
     &:hover {
-        background-color: rgba(22, 24, 35, .03);
+        background-color: rgba(22, 24, 35, 0.03);
     }
 }
 
@@ -72,5 +74,5 @@
     min-width: 140px;
 }
 
-.title{
+.title {
 }
