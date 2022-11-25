@@ -10,7 +10,7 @@ import { faCircleXmark, faEllipsisVertical, faSpinner } from '@fortawesome/free-
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import Button from '../../../Button';
-import { PlusIcon, SearchIcon } from '../../../Icons';
+import { PlusIcon, SearchIcon, LanguageIcon, FeedbackIcon, KeyboardIcon, DarkmodeIcon } from '../../../Icons';
 import Menu from '../../../Popper/Menu';
 
 const cx = classNames.bind(styles);
@@ -24,6 +24,27 @@ function Header() {
         }, 2000);
     }, []);
 
+    const listItem = [
+        {
+            icon: <LanguageIcon />,
+            title: 'English',
+        },
+        {
+            icon: <FeedbackIcon />,
+            title: 'Feedback and help',
+            to: '/feedback',
+        },
+        {
+            icon: <KeyboardIcon />,
+            title: 'Keyboard shortcuts',
+        },
+        {
+            icon: <DarkmodeIcon />,
+            title: 'Dark mode',
+            button: 'mode',
+        },
+    ];
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -36,8 +57,6 @@ function Header() {
                         <div className={cx('search-result')} tabIndex="-1" {...attr}>
                             <PopperWrapper>
                                 <h4 className={cx('search-title')}>Accounts</h4>
-                                <AccountsItem />
-                                <AccountsItem />
                                 <AccountsItem />
                                 <h4 className={cx('span')}> View all results for ....</h4>
                             </PopperWrapper>
@@ -60,7 +79,7 @@ function Header() {
                         Upload
                     </Button>
                     <Button primary>Log in</Button>
-                    <Menu>
+                    <Menu items={listItem}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon className={cx('icon-menu')} icon={faEllipsisVertical} />
                         </button>
