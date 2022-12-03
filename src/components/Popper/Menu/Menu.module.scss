@@ -1,2 +1,19 @@
+.Menu-list {
+    width: 224px;
+
+    .menu-item {
+        margin-left: 0;
+    }
+}
+
 .menu-item {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 24px;
+    width: 100%;
+    justify-content: flex-start;
+    color: rgba(22, 24, 35, 1);
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
 }

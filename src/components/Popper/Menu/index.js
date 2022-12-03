@@ -11,9 +11,11 @@ function WrapperMenu({ children, classNames, items = [] }) {
     return (
         <div className={cx('wrapper', { classNames })}>
             <Tippy
+                interactive
+                delay={[0, 700]}
                 placement="bottom-end"
                 render={(attrs) => (
-                    <div className={cx('Menu-item')} tabIndex="-1" {...attrs}>
+                    <div className={cx('Menu-list')} tabIndex="-1" {...attrs}>
                         <PopperWrapper className={cx('menu-popper')}>{renderItems}</PopperWrapper>
                     </div>
                 )}

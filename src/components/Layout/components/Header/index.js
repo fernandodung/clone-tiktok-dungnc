@@ -28,11 +28,25 @@ function Header() {
         {
             icon: <LanguageIcon />,
             title: 'English',
+            children: {
+                title: 'Language',
+                data: [
+                    {
+                        type: 'Language',
+                        code: 'en',
+                        title: 'Endlish',
+                    },
+                    {
+                        type: 'Language',
+                        code: 'vn',
+                        title: 'Việt Nam',
+                    },
+                ],
+            },
         },
         {
             icon: <FeedbackIcon />,
             title: 'Feedback and help',
-            to: '/feedback',
         },
         {
             icon: <KeyboardIcon />,
